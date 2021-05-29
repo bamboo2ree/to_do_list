@@ -1,8 +1,8 @@
-<h1 class="new_h1 mt-4">New note</h1>
+<h1 class="text-center mt-4">Edit Topic</h1>
 <div class="row">
     <div class="col-6 mx-auto">
-        <%= render "error_messages" %>
-            <%= form_for @list do |f| %>
+        <%= form_for @list do |f| %>
+            <%= render "error_messages" %>
             <div class="form-group">
                 <%= f.label :title %>
                 <%= f.text_field :title, class: "form-control" %>
@@ -14,9 +14,9 @@
             <div class="action">
                 <%= f.submit class: "btn btn-primary btn-block" %>
             </div>
+            <div class="back_button mt-3">
+                <%= link_to "Back", root_path, class: "btn btn-light" %>
+            </div>
         <% end %>
-        <div class="back_button mt-3">
-            <%= link_to "Back", root_path, class: "btn btn-light" %>
-        </div>
     </div>
 </div>
