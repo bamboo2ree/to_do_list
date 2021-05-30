@@ -1,0 +1,25 @@
+<h1 class="text-center mt-3">Preview</h1>
+<hr>
+<div class="row">
+    <div class="col-12 mx-auto">
+
+        <p class="text-center">
+            <strong>Title:</strong>
+            <%= @list.title %>
+        </p>
+        <p class="text-center">
+            <strong>Note:</strong>
+            <%= @list.note %>
+        </p>
+        <p class="text-center">
+            <strong>Time:</strong>
+            Created <%= time_ago_in_words(@list.created_at) %> ago
+        </p>
+
+    </div>
+
+    <div class="back_button ml-auto mt-3">
+        <%= link_to "Back", root_path, class: "btn btn-light" %>
+    </div>
+    
+</div>

@@ -3,6 +3,10 @@ class ListsController < ApplicationController
     @lists = List.all
   end
 
+  def show
+    @list = List.find(params[:id])
+  end
+
   def new
     @list = List.new
   end
@@ -27,6 +31,12 @@ class ListsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to root_url
   end
 
   private
